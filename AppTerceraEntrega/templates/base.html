@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Template Mo">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+
+    <title>HTML CSS Template</title>
+<!--
+
+ART FACTORY
+
+https://templatemo.com/tm-537-art-factory
+
+-->
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/font-awesome.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/templatemo-art-factory.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/owl-carousel.css' %}">
+
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="{% url 'Inicio' %}">Inicio</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                          Recetas
+                        </a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="{% url 'AgregarRecetas' %}">Crear Receta</a>
+                          <a class="dropdown-item" href="{% url 'Recetas' %}">Ver Receta</a>
+                          <!-- <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#">Something else here</a> -->
+                        </div>
+                      </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                        Nutrición
+                      </a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{% url 'AgregarNutricion' %}">Crear Nutrición</a>
+                        <a class="dropdown-item" href="{% url 'Nutrición' %}">Ver Nutrución</a>
+                        <a class="dropdown-item" href="{% url 'BuscarMatricula' %}">Buscar Nutricionista por matrícula</a>
+                        <!-- <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a> -->
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                          Deportes
+                        </a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="{% url 'AgregarDeportes' %}">Crear Deportes</a>
+                          <a class="dropdown-item" href="{% url 'Deportes' %}">Ver Deportes</a>
+                          <!-- <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#">Something else here</a> -->
+                        </div>
+                    </li>
+                  </ul>
+                  <!-- <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form> -->
+                </div>
+              </nav>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+
+    <!-- ***** Welcome Area Start ***** -->
+    <div class="welcome-area" id="welcome">
+
+        <!-- ***** Header Text Start ***** -->
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="text-center col-lg-6 col-md-66 col-sm-12 col-xs-12" data-scroll-reveal="enter left move 80px over 0.6s after 0.4s">
+                    <!-- <div class="text-center"> -->
+                        <h1 style="margin-left: 200px;">Blog para deportistas</strong></h1>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ***** Header Text End ***** -->
+    </div>
+    <!-- ***** Welcome Area End ***** -->
+
+    <!-- ***** Features Small Start ***** -->
+    {% block contenidoadicional %}
+            
+    {% endblock contenidoadicional %}
+
+    <!-- <section class="section" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="owl-carousel owl-theme">
+                    <div class="item service-item">
+                        <div class="icon">
+                            <i><img src="{% static 'assets/images/icono_receta.png' %}" alt=""></i>
+                        </div>
+                        <h5 class="service-title">Crea tu propia receta</h5>
+                        <p>Presioná el siguiente botón para crear la receta .</p>
+                        <a href="{% url 'AgregarRecetas' %}" class="main-button">Crear receta</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- ***** Features Small End ***** -->
+    
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-md-12 col-sm-12">
+                    <p class="copyright">Copyright &copy; 2023 Art Factory Company 
+                
+                . Design: <a rel="nofollow" href="https://templatemo.com">TemplateMo</a></p>
+                </div>
+                <div class="col-lg-5 col-md-12 col-sm-12">
+                    <ul class="social">
+                        <li><a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://www.ress.com"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="https://www.dribble.com"><i class="fa fa-dribbble"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- jQuery -->
+    <script src="{% static 'assets/js/jquery-2.1.0.min.js' %}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{% static 'assets/js/popper.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+
+    <!-- Plugins -->
+    <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+    <script src="{% static 'assets/js/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'assets/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'assets/js/imgfix.min.js' %}"></script> 
+    
+    <!-- Global Init -->
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+
+  </body>
+</html>

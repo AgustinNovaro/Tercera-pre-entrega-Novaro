@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenidoadicional %}
+    <h4>
+    Visualización de Nutrición agregados:
+    </h4>
+        <ul>
+            <table>
+            {% for nutri in nutricion %}
+            <li><b>Nombre</b>: {{nutri.nombre}} - 
+                <b>Apelldo</b>: {{nutri.apellido}} -
+                <b>Matrícula</b> : {{nutri.matricula}} - 
+                <b>Especialidad</b>: {{nutri.especialidad}}
+                <p>&ensp;</p>
+            </li> 
+            {% endfor %}
+            </table>
+        </ul>  
+{% endblock contenidoadicional %}

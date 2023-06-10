@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenidoadicional %}
+<p>Los nutricionistas que tienen la matrícula encontrados son:</p> 
+<ul>
+    {% for matri in matricula %}
+    <li> <b>Nombre:</b> {{ matri.nombre }} </li>
+    <li> <b>Apellido:</b> {{ matri.apellido }} </li>
+    <li> <b>Especialidad:</b> {{ matri.especialidad }} </li>
+    <li> <b>Matrícula:</b> {{ matri.matricula }};</li>
+    <p>&ensp;</p>
+    {% endfor %}
+</ul>
+        
+{% endblock contenidoadicional %}

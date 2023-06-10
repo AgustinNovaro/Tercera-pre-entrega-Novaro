@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenidoadicional %}
+    <h4>
+    Visualización de Deportes agregados:
+    </h4>
+    <ul>
+    {% for deporte in deportes %}
+        <li><b>Deporte:</b> {{deporte.deporte}}
+            <b>País:</b> {{deporte.pais}}
+            <b>Deportista:</b> {{deporte.deportista}}
+            <b>Atendido por:</b> {{deporte.atendido_por}}
+            <p>&ensp;</p>
+        </li>
+    {% endfor %}
+    </ul>  
+{% endblock contenidoadicional %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenidoadicional %}
+    <form action="{% url 'BuscarMatricula' %}" method="POST">{% csrf_token %}
+        <p>Inserte el número de matrícula que desea consultar: <input type="text" name="matricula"></p>
+        <button type="submit"> Buscar </button>
+    </form>
+{% endblock contenidoadicional %} 

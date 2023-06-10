@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenidoadicional %}
+    <h4>
+    Visualización las recetas creadas:
+    </h4>
+        <ul>
+            <table>
+            {% for receta in recetas %}
+            <li><b>Título:</b>: {{receta.titulo}} - 
+                <b>Sabor:</b>: {{receta.sabor}} -
+                <b>Ingredientes:</b> : {{receta.ingredientes}} - 
+                <b>Tiempo de cocción:</b>: {{receta.tiempo_coccion}}
+                <b>Instruccion:</b> : {{receta.instrucciones}} - 
+                <p>&ensp;</p>
+            </li> 
+            {% endfor %}
+            </table>
+        </ul>  
+{% endblock contenidoadicional %}
